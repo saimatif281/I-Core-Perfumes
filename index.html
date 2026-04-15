@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I CORE Perfumes - The future of scent evolution. Experience premium, long-lasting fragrances re-engineered for the modern elite.">
+    <title>I CORE | Fragrance Re-Engineered</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-purple: #9d00ff; 
+            --dark-purple: #0d001a;
+            --gold-copper: #d4af37; 
+            --text-white: #ffffff;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--dark-purple);
+            color: var(--text-white);
+            overflow-x: hidden;
+        }
+
+        .bg-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, #2d0052 0%, #05000d 100%);
+            z-index: -1;
+        }
+
+        /* Navbar */
+        nav {
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(15px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--gold-copper);
+            letter-spacing: 4px;
+        }
+
+        .nav-socials a {
+            color: var(--text-white);
+            font-size: 20px;
+            margin-left: 20px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .nav-socials a:hover {
+            color: var(--gold-copper);
+            transform: scale(1.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #fff, var(--gold-copper));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 35px;
+            letter-spacing: 5px;
+            color: #aaa;
+        }
+
+        .cta-btn {
+            padding: 18px 45px;
+            background: var(--gold-copper);
+            color: #000;
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: 4px;
+            transition: 0.4s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .cta-btn:hover {
+            box-shadow: 0 0 30px var(--gold-copper);
+            transform: translateY(-3px);
+        }
+
+        /* Store Section */
+        .store {
+            padding: 120px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: var(--gold-copper);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--glass-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.4s;
+        }
+
+        .product-card:hover {
+            border-color: var(--gold-copper);
+            transform: translateY(-10px);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 250px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            color: var(--gold-copper);
+        }
+
+        .product-card h3 {
+            margin-bottom: 10px;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .price {
+            color: var(--gold-copper);
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .buy-btn {
+            display: block;
+            padding: 12px;
+            border: 1px solid var(--gold-copper);
+            color: var(--gold-copper);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .buy-btn:hover {
+            background: var(--gold-copper);
+            color: #000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 15px 5%; }
+            .nav-socials a { margin-left: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <nav>
+        <div class="logo">I CORE</div>
+        <div class="nav-socials">
+            <a href="https://www.tiktok.com/@i_core_3366?_r=1&_t=ZS-95Y8UPgTcpB" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/i_core_3366?igsh=cTZkNjFneG5yMDlp" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Fragrance <br> Re-Engineered</h1>
+        <p>The Future of Scent Evolution</p>
+        <a href="#store" class="cta-btn">View Catalog</a>
+    </header>
+
+    <section class="store" id="store">
+        <h2 class="section-title">The Collection</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img"><i class="fas fa-bolt"></i></div>
+                <h3>Kinetic Ion</h3>
+                <p class="price">Rs. 2,999</p>
+                <a href="https://www.instagram.com/i_core_3366?igsh=cTZkNjFneG5yMDlp" target="_blank" class="buy-btn">Order via Instagram DM</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img"><i class="fas fa-microchip"></i></div>
+                <h3>Nova Core</h3>
+                <p class="price">Rs. 3,499</p>
+                <a href="https://www.instagram.com/i_core_3366?igsh=cTZkNjFneG5yMDlp" target="_blank" class="buy-btn">Order via Instagram DM</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img"><i class="fas fa-atom"></i></div>
+                <h3>Static Mist</h3>
+                <p class="price">Rs. 2,499</p>
+                <a href="https://www.instagram.com/i_core_3366?igsh=cTZkNjFneG5yMDlp" target="_blank" class="buy-btn">Order via Instagram DM</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 I CORE Perfumes. Built for the Modern Elite.</p>
+    </footer>
+
+</body>
+</html>
